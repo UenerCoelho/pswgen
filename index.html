@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="keywords"
+      content="Gerador de senhas, gerador, passwords, pswgen"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Password Generator</title>
+  </head>
+  <body>
+    <img class="logo" src="./assets/img/logo.png" alt="PswGrn logo" />
+
+    <main class="container-input">
+      <span>Tamanho <span id="valor"></span> Caracteres</span>
+      <input
+        type="range"
+        id="slider"
+        class="slider"
+        min="8"
+        max="25"
+        value="15"
+      />
+
+      <button id="button" class="button-cta" onclick="genPsw()">
+        Gerar Senha
+      </button>
+
+      <div id="container-password" class="container-password hide" onclick="copyPsw()">
+        <span class="title">Sua senha gerada foi:</span>
+        <span id="password" class="password"></span>
+        <span class="tooltip">Clique na senha para copiar 👆</span>
+      </div>
+    </main>
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>
